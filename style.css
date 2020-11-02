@@ -1,0 +1,97 @@
+body, html {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 10px;
+    width: 160px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input {
+    max-width: 350px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 2rem;
+    outline: none;
+    font-style: italic;
+}
+
+
+.end {
+    display: none;
+}
+
+.end.active {
+    display: flex;
+}
+
+/* HANGMAN */
+
+#head,
+#body,
+#arms,
+#legs,
+#scaffold {
+    opacity: 0;
+}
+
+.one-wrong #head {
+    opacity: 1;
+}
+
+.two-wrong #head,
+.two-wrong #scaffold {
+    opacity: 1;
+}
+
+.three-wrong #head,
+.three-wrong #scaffold,
+.three-wrong #legs {
+    opacity: 1;
+}
+
+.four-wrong #head,
+.four-wrong #scaffold,
+.four-wrong #legs,
+.four-wrong #arms {
+    opacity: 1;
+}
+
+.five-wrong #head,
+.five-wrong #scaffold,
+.five-wrong #legs,
+.five-wrong #arms,
+.five-wrong #body {
+    opacity: 1;
+}

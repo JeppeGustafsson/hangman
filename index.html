@@ -11,7 +11,7 @@
 <body>
     <main>
         <section class="start section" id="start-section">
-            <input type="text" id="game-word">
+            <input placeholder="Enter word" type="text" id="game-word"> <!--Input to add a word to play -->
             <button id="start-button">Start</button>
         </section>
         <section class="game section" id="game-section">
@@ -40,13 +40,13 @@
                         fill="black" />
                 </svg>
             </div>
-            <div class="error-word-wrapper" id="error-words"></div>
-            <div class="word-wrapper" id="word-wrapper"></div>
+            <div class="error-word-wrapper" id="error-words"></div> <!-- Wrapper that holds wrong letters -->
+            <div class="word-wrapper" id="word-wrapper"></div> <!-- Wrapper that holds the letters of added word -->
             <p class="static-text">Press a key on your keyboard to add a character</p>
         </section>
         <section class="end section" id="end-section">
-            <h1 id="End-text"></h1>
-            <button class="TryAgain-btn" id="restart-btn"></button>
+            <h1 id="End-text"></h1> <!-- Dynamic text depending on win or lose -->
+            <button class="TryAgain-btn" id="restart-btn"></button> <!-- Dynamic text depending on win or lose -->
         </section>
     </main>
 
