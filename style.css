@@ -48,6 +48,9 @@ input {
     font-style: italic;
 }
 
+.game {
+    overflow: hidden;
+}
 
 .end {
     display: none;

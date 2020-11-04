@@ -7,4 +7,4 @@ const logKey = (e) => {
     logError(e);
 }
 
-document.addEventListener('keydown', logKey);
+document.addEventListener('keypress', logKey);

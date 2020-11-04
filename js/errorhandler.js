@@ -11,13 +11,11 @@ const logError = (e) => {
         if ( output.children.length === 0 ) {
             console.log('empty');
         } else {
-            errors.push(e.code.slice(3).toLowerCase());
+            errors.push(e.code.slice(3).toLowerCase()); 
+            const errorObject = `<p>${e.code.slice(3).toLowerCase()}</p>`;
+            errorOutput.innerHTML += errorObject;
+            hangman();
         }
     };
-    // let errorObject = errors.map(letter => {
-    //     const errorObject = `<p>${letter}</p>`;
-    //     errorOutput.innerHTML = errors;
-    // })
-
-    errorOutput.innerHTML = errors;
 };
+

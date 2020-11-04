@@ -20,7 +20,11 @@ const startGame = () => {
     setTimeout(() => {
         scrollDown();
     }, 500);
+    setTimeout(() => {
+        document.querySelector('.start').style.display = "none";
+    }, 1000);
 }
+
 
 document.getElementById('start-button').addEventListener('click', startGame);
 
