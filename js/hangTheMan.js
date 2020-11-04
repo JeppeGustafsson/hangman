@@ -20,6 +20,12 @@ const hangman = () => {
         case 5: 
             hangmanWrapper.classList.remove('four-wrong');
             hangmanWrapper.classList.add('five-wrong');
+            setTimeout (() => {
+                document.getElementById('end-section').style.opacity = "0.8";
+                document.getElementById('end-section').style.pointerEvents = "all";
+            }, 500);
+            document.getElementById('end-text').innerHTML = 'You Lose';
+            document.getElementById('restart-btn').innerHTML = 'Try again';
         break;
     }
 }
