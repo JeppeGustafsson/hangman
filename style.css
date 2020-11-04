@@ -5,6 +5,7 @@ body, html {
     font-family: Helvetica;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -94,4 +95,40 @@ input {
 .five-wrong #arms,
 .five-wrong #body {
     opacity: 1;
+}
+
+.word-wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
+.word-wrapper .letter {
+    width: 40px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #e6e6e6;
+    border-bottom: 5px solid #c0c0c0;
+}
+
+.word-wrapper .letter p {
+    opacity: 0;
+}
+
+.word-wrapper .letter.active p {
+    opacity: 1;
+}
+
+.error-word-wrapper {
+    height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 300px;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
