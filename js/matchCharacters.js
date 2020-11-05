@@ -1,7 +1,10 @@
+let correctAudio = document.getElementById('correct-sound');
+
 const logKey = (e) => {
     Array.from(output.children).forEach(item => {
         if (item.firstChild.nextSibling.innerHTML === e.code.slice(3).toLowerCase()) {
                 item.classList.add('active');
+                correctAudio.play();
         }
     });
     logError(e);
@@ -15,7 +18,7 @@ const logKey = (e) => {
                 document.getElementById('end-section').style.pointerEvents = "all";
             }, 500);
             document.getElementById('end-text').innerHTML = 'You win';
-            document.getElementById('restart-btn').innerHTML = 'Rematch';
+            document.getElementById('restart-btn').innerHTML = 'Play again';
         }
     }
 }

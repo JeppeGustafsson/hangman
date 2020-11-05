@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Hangman</title>
 </head>
 
 <body>
+    <audio id="correct-sound" src="./audio/531510__eponn__correct-blips.wav"></audio>
+    <audio id="incorrect-sound" src="./audio/342756__rhodesmas__failure-01.wav"></audio>
     <main>
         <section class="start section" id="start-section">
-            <input placeholder="Enter word" type="text" id="game-word"> <!--Input to add a word to play -->
+            <h1 id="title" class="title animate">The Hangman game.</h1>
+            <input oninput="evaluateInput()" placeholder="Enter word" type="text" id="game-word"> <!--Input to add a word to play -->
             <button id="start-button">Start</button>
         </section>
         <section class="game section" id="game-section">

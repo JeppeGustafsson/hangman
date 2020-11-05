@@ -1,5 +1,6 @@
 let errors = [];
 const errorOutput = document.getElementById('error-words');
+let incorrectAudio = document.getElementById('incorrect-sound');
 
 const logError = (e) => {
     let test = Array.from(output.children).find(item => {
@@ -15,6 +16,7 @@ const logError = (e) => {
             const errorObject = `<p>${e.code.slice(3).toLowerCase()}</p>`;
             errorOutput.innerHTML += errorObject;
             hangman();
+            incorrectAudio.play();
         }
     };
 };
