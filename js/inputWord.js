@@ -44,6 +44,5 @@ const startGame = () => {
     }, 2000);
 }
 
-
 startBtn.addEventListener('click', startGame);
 

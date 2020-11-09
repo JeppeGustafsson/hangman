@@ -137,15 +137,6 @@ input {
     animation: shakeX 8s ease infinite alternate;
 }
 
-@keyframes swingCustom {
-    0% {
-        transform: rotateX('5deg');
-    }
-    100% {
-        transform: rotateX('-5deg');
-    }
-}
-
 .word-wrapper {
     display: flex;
     margin-top: 10px;
@@ -192,6 +183,25 @@ input {
     color: gray;
     text-transform: uppercase;
     letter-spacing: 5px;
+}
+
+.score-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-wrapper::before {
+    content: "SCORE:";
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    font-weight: normal;
 }
 
 

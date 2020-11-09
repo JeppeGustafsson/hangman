@@ -12,12 +12,12 @@ const logError = (e) => {
         if ( output.children.length === 0 ) {
             console.log('empty');
         } else {
-            errors.push(e.code.slice(3).toLowerCase()); 
             const errorObject = `<p>${e.code.slice(3).toLowerCase()}</p>`;
             errorOutput.innerHTML += errorObject;
             hangman();
             incorrectAudio.play();
+            score -= 10;
+            document.getElementById('score').innerHTML = score;
         }
     };
 };
-

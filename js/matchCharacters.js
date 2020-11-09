@@ -1,10 +1,13 @@
 let correctAudio = document.getElementById('correct-sound');
+let score = 0;
 
 const logKey = (e) => {
     Array.from(output.children).forEach(item => {
         if (item.firstChild.nextSibling.innerHTML === e.code.slice(3).toLowerCase()) {
                 item.classList.add('active');
                 correctAudio.play();
+                score =+ 10;
+                document.getElementById('score').innerHTML = score;
         }
     });
     logError(e);
