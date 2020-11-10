@@ -1,8 +1,10 @@
+//Elements
 const output = document.getElementById('word-wrapper');
 const startBtn = document.getElementById('start-button');
 const input =  document.getElementById('game-word');
-let delay = 2.2;
+let delay = 2.2; //delay for first element to animate
 
+//Function that handles inputvalue and render letter elements
 const addWord = () => {
     document.getElementById('title').classList.add('animate__hinge');
     let inputValue = input.value.toLowerCase();
@@ -15,6 +17,7 @@ const addWord = () => {
     })
 }
 
+//Simple function for evaluating input length
 const evaluateInput = () => {
     if (input.value.length < 2) {
         startBtn.classList.add('disabled');
@@ -24,10 +27,12 @@ const evaluateInput = () => {
 }
 evaluateInput();
 
+//Auto scroll function for easy navigation
 const scrollDown = () => {
     window.scrollTo(0,document.body.scrollHeight)
 }
 
+//Runs multiple functions + starts animation on delay after scroll
 const startGame = () => {
     document.getElementById('game-section').style.display = "flex";
     addWord();
